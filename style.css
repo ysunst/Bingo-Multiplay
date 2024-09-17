@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#f19ed2 0%, #f19ed2 33.33%, #f19ed2 66.67%, #f19ed2 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+}
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.container {
+    width: 1200px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuir el espacio entre los elementos */
+    border-radius: 24px;
+    background-size: cover;
+    position: relative;
+    padding: 20px; /* Espaciado interno opcional */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Añadido para mejorar el diseño */
+}
+
+.container__contenido {
+    display: flex;
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+    width: 100%; /* Asegura el uso completo del ancho */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+.container__informaciones {
+    flex: 1;
+    max-width: 40%; /* Ajusta el tamaño del contenedor de información */
+    padding: 20px;
+}
+
+.container__visualizacion {
+    flex: 1;
+    max-width: 60%; /* Ajusta el tamaño del contenedor de visualización */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.container__boton {
+    border-radius: 16px;
+    background: #ff7f29c4;
+    padding: 16px 24px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    margin-top: 2rem;
+}
+
+.container__boton:disabled {
+    background: #898989;
+}
+
+.container__texto {
+    margin: 16px 0;
+}
+
+.container__texto-azul {
+    color: #1875E8;
+}
+
+.container__input {
+    width: 100%;
+    height: 72px;
+    border-radius: 16px;
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    padding: 2rem;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h1 {
+    font-family: serif;
+    font-size: 65px;
+    padding-bottom: 2.5rem;
+    text-align: center; /* Alinea el texto horizontalmente al centro */
+    margin: 0 auto; /* Asegura que el margen esté equilibrado */
+}
+
+
+.texto__parrafo {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.container__imagen-persona {
+    max-width: 100%; /* Tamaño ajustado para no exceder el ancho del contenedor */
+    height: auto;
+    object-fit: cover;
+    margin-right: 20px; /* Espaciado entre la imagen y la tabla */
+}
+
+#bingoTable {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 24px;
+    text-align: center;
+}
+
+#bingoTable th, #bingoTable td {
+    border: 1px solid #1875E8;
+    padding: 10px;
+    background-color: #fff;
+    color: #1875E8;
+}
+
+#bingoTable th {
+    background-color: #1875E8;
+    color: white;
+}
+
+/* Estilos para el mensaje de Bingo */
+.bingo-message {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 16px;    
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1000;
+    width: 80%; /* Ajusta el ancho del contenedor */
+    max-width: 500px; /* Ancho máximo del contenedor */
+}
+
+.bingo-message img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al 100% del contenedor */
+    max-height: 200px; /* Ajusta la altura máxima de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+.mensaje-ganador {
+    position: fixed;
+    top: 55%;
+    right: 20%; /* Ajusta este valor para mover el mensaje más a la derecha */
+    transform: translateY(-50%); /* Centra verticalmente en relación a la mitad de la pantalla */
+    padding: 20px; /* Aumenta el padding para más espacio alrededor del mensaje */
+    text-align: center;
+    z-index: 1000;
+    width: 600px; /* Ajusta el ancho según lo necesario */
+}
+
+.mensaje-ganador h2 {
+    font-size: 2.5rem; /* Aumenta el tamaño del encabezado */
+    margin: 0 0 10px; /* Espacio debajo del encabezado */
+}
+
+.mensaje-ganador p {
+    font-size: 1.5em; /* Aumenta el tamaño del texto del párrafo */
+    margin: 0 0 10px; /* Espacio debajo del párrafo */
+}
+
+.imagen-ganador {
+    max-width: 100%;
+    height: auto;
+}
+

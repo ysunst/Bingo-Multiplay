@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Juego de Bingo de Amor y Amistad</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <h1>Bingo de Amor y Amistad HV Multiplay</h1>
+
+                    <p class="texto__parrafo">Presiona el botón para jugar con la letra o el número.</p>
+                    <p id="numeroActual" class="texto__parrafo">Número a jugar: -</p>
+                    <p id="letraActual" class="texto__parrafo">Letra a jugar: -</p>
+                </div>
+                <div class="chute container__botones">
+                    <button onclick="actualizarNumero();" class="container__boton" id="numero-a-jugar">Número a Jugar</button>
+                    <button onclick="actualizarLetra();" class="container__boton" id="letra-a-jugar">Letra a Jugar</button>
+                    <button onclick="verificarGanador();" class="container__boton" id="verificar" disabled>Verificar Ganador</button>
+                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo Juego</button>
+                </div>
+            </div>
+            <div class="container__visualizacion">
+                <img src="./img/amor y amistad.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
+                <table id="bingoTable">
+                    <thead>
+                        <tr>
+                            <th>B</th>
+                            <th>I</th>
+                            <th>N</th>
+                            <th>G</th>
+                            <th>O</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="B-1"></td>
+                            <td id="I-1"></td>
+                            <td id="N-1"></td>
+                            <td id="G-1"></td>
+                            <td id="O-1"></td>
+                        </tr>
+                        <tr>
+                            <td id="B-2"></td>
+                            <td id="I-2"></td>
+                            <td id="N-2"></td>
+                            <td id="G-2"></td>
+                            <td id="O-2"></td>
+                        </tr>
+                        <tr>
+                            <td id="B-3"></td>
+                            <td id="I-3"></td>
+                            <td id="N-3"></td>
+                            <td id="G-3"></td>
+                            <td id="O-3"></td>
+                        </tr>
+                        <tr>
+                            <td id="B-4"></td>
+                            <td id="I-4"></td>
+                            <td id="N-4"></td>
+                            <td id="G-4"></td>
+                            <td id="O-4"></td>
+                        </tr>
+                        <tr>
+                            <td id="B-5"></td>
+                            <td id="I-5"></td>
+                            <td id="N-5"></td>
+                            <td id="G-5"></td>
+                            <td id="O-5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
